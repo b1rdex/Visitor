@@ -34,43 +34,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace {
-
-from('Hoa')
-
-/**
- * \Hoa\Visitor\Exception
- */
--> import('Visitor.Exception');
-
-}
-
 namespace Hoa\Visitor {
 
 /**
- * Interface \Hoa\Visitor\Visit.
+ * Class \Hoa\Visitor\Exception.
  *
- * Visitor interface.
+ * Extending the \Hoa\Core\Exception class.
  *
  * @author     Ivan Enderlin <ivan.enderlin@hoa-project.net>
  * @copyright  Copyright © 2007-2013 Ivan Enderlin.
  * @license    New BSD License
  */
 
-interface Visit {
-
-    /**
-     * Visit an element.
-     *
-     * @access  public
-     * @param   \Hoa\Visitor\Element  $element    Element to visit.
-     * @param   mixed                 &$handle    Handle (reference).
-     * @param   mixed                 $eldnah     Handle (not reference).
-     * @return  mixed
-     */
-    public function visit ( \Hoa\Visitor\Element $element,
-                            &$handle = null,
-                             $eldnah = null );
-}
+class Exception extends \Hoa\Core\Exception { }
 
 }

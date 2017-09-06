@@ -8,7 +8,7 @@
  *
  * New BSD License
  *
- * Copyright © 2007-2017, Hoa community. All rights reserved.
+ * Copyright © 2007-2013, Ivan Enderlin. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -34,25 +34,43 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace Hoa\Visitor;
+namespace {
+
+from('Hoa')
+
+/**
+ * \Hoa\Visitor\Exception
+ */
+-> import('Visitor.Exception');
+
+}
+
+namespace Hoa\Visitor {
 
 /**
  * Interface \Hoa\Visitor\Element.
  *
  * Interface to visit an element.
  *
- * @copyright  Copyright © 2007-2017 Hoa community
+ * @author     Ivan Enderlin <ivan.enderlin@hoa-project.net>
+ * @copyright  Copyright © 2007-2013 Ivan Enderlin.
  * @license    New BSD License
  */
-interface Element
-{
+
+interface Element {
+
     /**
      * Accept a visitor.
      *
+     * @access  public
      * @param   \Hoa\Visitor\Visit  $visitor    Visitor.
      * @param   mixed               &$handle    Handle (refence).
      * @param   mixed               $eldnah     Handle (no reference).
      * @return  mixed
      */
-    public function accept(Visit $visitor, &$handle = null, $eldnah  = null);
+    public function accept ( \Hoa\Visitor\Visit $visitor,
+                             &$handle = null,
+                              $eldnah = null );
+}
+
 }
